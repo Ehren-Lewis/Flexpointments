@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import "./assets/style/registerBusinesscss.css"
+
 import {
     BrowserRouter,
     Route,
@@ -11,19 +13,15 @@ import {
 import Landing from './layouts/landing'
 import Header from './layouts/header';
 
+import BusinessForm from './components/registerBusinessForm';
+
 function App() {
 
-    const [click, setClick ] = useState(0);
-
-    const buttonClick = () => {
-        setClick(click + 1);
-        
-    }
 
     // if logged in, 2 different headers 
 
   return (
-    <button style={{backgroundColor: click > 5 ? "green" : "yellow"}} onClick={() => setClick(click + 1)}>clicks: {click}</button>
+    <BusinessForm />
     // <>
     // <BrowserRouter>
     // <Routes>
