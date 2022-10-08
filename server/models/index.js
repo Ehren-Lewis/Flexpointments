@@ -32,7 +32,9 @@ const userSchema = new Schema({
         type: String,
         required: truie
     }
-});
+},
+{timestamps: true}
+);
 
 userSchema.pre( "save", async function (next) {
     if ( this.isNew || this.isModified("password")) {
