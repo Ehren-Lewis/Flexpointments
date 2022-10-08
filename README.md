@@ -69,3 +69,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # Flexpointments
+
+
+Flexpointments is designed to help small businesses wtih managing their appointments
+with ease. 
+
+As someone who operates a local barber shop
+I would like an easy way to manage the appointments of my customers.
+
+As the owner, I should be able to register my company with flexpointments
+As the owner, I should be able to dynamically add roles that fit my specific business model
+As the owner, I should be able to dedsignate who the barbers are that will be shown to the customers
+As the owner, I should be able to designate what kind of haircuts are available
+As the owner, I should be able to make a calender that has all of my employees (or just barbers) on it
+    So the customers know who is working when.
+As the owner, when the employee has an emergency, flexpointments will automatically tell anyone alotted during that time
+
+As a user, I should be able to register an account that uses authentification
+As a user, I should be able to view the calender of the business to see what days the barbers are working
+As the user, I should be able to select the haircut I want with the barber I want at the time I want
+As the user, If a guest at an earlier time cancels their appointment, I should be notified
+As the user, I can toggle if I want notifications about earlier appointments or not
+
+
