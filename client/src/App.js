@@ -1,27 +1,46 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
+import {
+  BrowserRouter,
+  Route,
+  Routes
+  // Link
+} from 'react-router-dom'
+
+const GET_USERS = gql`
+  query Query {
+    users {
+      firstName
+      lastName
+      email
+    }
+  }
+`
+
+// Import Apollo Dependencies
+import { useQuery, gql} from "@apollo/client";
+
+// Import styling ?? 
 import './App.css';
 import "./assets/style/registerBusinesscss.css"
 
-import {
-    BrowserRouter,
-    Route,
-    Routes
-    // Link
-} from 'react-router-dom'
 
+
+
+// Importing components
 import Landing from './layouts/landing'
 import Header from './layouts/header';
-
 import BusinessForm from './components/registerBusinessForm';
+import UserFrom from "./components/userRegisterForm";
 
 function App() {
 
+  const { loading, err, data } = useQuery(GET_USERS)
 
     // if logged in, 2 different headers 
 
   return (
-    <BusinessForm />
+    // <BusinessForm />
+    <UserFrom />
     // <>
     // <BrowserRouter>
     // <Routes>
