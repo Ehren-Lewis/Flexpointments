@@ -10,7 +10,7 @@ const path = require("path");
 
 
 // Adding the appollo stuff
-const { ApolloServer }  = requir("apollo-server-express");
+const { ApolloServer }  = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
 
 const server = new ApolloServer({
@@ -24,7 +24,6 @@ const express = require("express");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes);
 
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
@@ -36,3 +35,5 @@ const startApolloServer = async (typeDefs, resolvers) => {
     })
   })
   };
+
+  startApolloServer(typeDefs, resolvers);
