@@ -18,7 +18,7 @@ type Users {
     
     type Query {
 
-        users: Users
+        users: [Users]
 
     }
 

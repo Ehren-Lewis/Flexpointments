@@ -28,18 +28,6 @@ const client = new ApolloClient({
 
 
 // Same code as the sandbox
-client.query({
-  query:gql`
-    query Query {
-      users {
-        firstName
-        lastName
-        email
-        _id
-      }
-    }
-  `
-}).then(data => console.log(data))
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

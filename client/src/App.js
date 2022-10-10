@@ -6,16 +6,6 @@ import {
   // Link
 } from 'react-router-dom'
 
-const GET_USERS = gql`
-  query Query {
-    users {
-      firstName
-      lastName
-      email
-    }
-  }
-`
-
 // Import Apollo Dependencies
 import { useQuery, gql} from "@apollo/client";
 
@@ -31,6 +21,18 @@ import Landing from './layouts/landing'
 import Header from './layouts/header';
 import BusinessForm from './components/registerBusinessForm';
 import UserFrom from "./components/userRegisterForm";
+
+
+
+const GET_USERS = gql`
+  query Query {
+    users {
+      firstName
+      lastName
+      email
+    }
+  }
+`
 
 function App() {
 
