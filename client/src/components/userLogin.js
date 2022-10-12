@@ -19,8 +19,7 @@ const UserLogin = () => {
 
     const submit = async (e) => {
         console.log(loginForm);
-        // loginUser({variables: {email: loginForm.email, password: loginForm.password}});
-        //   loginUser({variables: { email: loginForm.email, password: loginForm.password} });
+
         try {
         const { data } = await loginUser({
             variables: {email: loginForm.email, password: loginForm.password}
@@ -34,6 +33,10 @@ const UserLogin = () => {
         console.log(err)
     }
         // const { loading, error, data } = useMutation({email: loginForm.email, password: loginForm.password});
+    }
+
+    const logout =(e) => {
+        AuthService.setLogOut();
     }
 
 
@@ -50,7 +53,10 @@ const UserLogin = () => {
             <label htmlFor="password">Password: </label>
             <input  id="password" type="password" onChange={onChange} className="form-control"/>
             <input type="submit" className="btn btn-success mt-3 mx-auto" onSubmit={e => {e.preventDefault(); submit(e);}}/>
+            {/* <button onClick={e => {e.preventDefault(); logout(e)}}>Logout</button> */}
         </form>
+
+        
 
 
     

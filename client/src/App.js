@@ -22,6 +22,7 @@ import Header from './layouts/header';
 import BusinessForm from './components/registerBusinessForm';
 import UserRegister from "./components/userRegisterForm";
 import UserLogin from "./components/userLogin";
+import About from './pages/flexpointments/about';
 
 
 const GET_USERS = gql`
@@ -45,12 +46,14 @@ function App() {
     // <UserFrom />
     // <>
     <BrowserRouter>
+    <Header />
     <Routes>
        {/* <Route path="/landing" element={<Landing />}/>
        <Route path="/home" element={<Header />}/>  */}
-       <Route exact path="/register" element={<UserRegister />} />
-       <Route exact path="/login" element={<UserLogin />} />
-       <Route exact path="/user" element={< Landing />} />
+       <Route exact path="/client/register" element={<UserRegister />} />
+       <Route exact path="/client/login" element={<UserLogin />} />
+       <Route exact path="/user" element={<Landing />} />
+       <Route exacr path="/about" element={<About />} />
     </Routes>
     </BrowserRouter>
     // </>
