@@ -20,8 +20,8 @@ import "./assets/style/registerBusinesscss.css"
 import Landing from './layouts/landing'
 import Header from './layouts/header';
 import BusinessForm from './components/registerBusinessForm';
-import UserFrom from "./components/userRegisterForm";
-
+import UserRegister from "./components/userRegisterForm";
+import UserLogin from "./components/userLogin";
 
 
 const GET_USERS = gql`
@@ -42,14 +42,17 @@ function App() {
 
   return (
     // <BusinessForm />
-    <UserFrom />
+    // <UserFrom />
     // <>
-    // <BrowserRouter>
-    // <Routes>
-    //    <Route path="/landing" element={<Landing />}/>
-    //    <Route path="/home" element={<Header />}/> 
-    // </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+       {/* <Route path="/landing" element={<Landing />}/>
+       <Route path="/home" element={<Header />}/>  */}
+       <Route exact path="/register" element={<UserRegister />} />
+       <Route exact path="/login" element={<UserLogin />} />
+       <Route exact path="/user" element={< Landing />} />
+    </Routes>
+    </BrowserRouter>
     // </>
 
     // <button onClick={}></button>

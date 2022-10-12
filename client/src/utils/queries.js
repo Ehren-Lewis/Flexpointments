@@ -2,12 +2,12 @@ import { gql } from "@apollo/client";
 
 const GET_ALL_USERS = gql`
     query Query {
-        users {
+        allUsers {
           firstName
           lastName
           email
           _id
-        }
+        } 
     }
 `
 
@@ -24,6 +24,13 @@ mutation Mutation($firstName: String!, $lastName: String!, $email: String!, $pas
       }
     }
   }
+
 `
+
+// const GET_USER = gql`
+// type Query {
+
+// }
+// `
 
     export  { GET_ALL_USERS, CREATE_USER }
